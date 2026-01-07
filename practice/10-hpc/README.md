@@ -4,5 +4,5 @@
 
 ## Exercises
 
-## Advanced Concepts
+## Advanced Concepts (Optional)
 

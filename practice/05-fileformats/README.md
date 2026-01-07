@@ -201,7 +201,7 @@ curl.exe --output index.html --url https://superuser.com
 curl.exe -o index.html https://superuser.com
 ```
 
-## Advanced Concepts
+## Advanced Concepts (Optional)
 
 ### Streaming Large Files
 

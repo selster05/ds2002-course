@@ -167,7 +167,7 @@ fictional ID `0987654321` as a parameter:
 docker run -v ${PWD}:/data converter -i 0987654321
 ```
 
-## Advanced Concepts
+## Advanced Concepts (Optional)
 
 ### Multi-Stage Builds
 

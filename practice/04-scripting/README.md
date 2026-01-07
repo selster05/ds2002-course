@@ -189,7 +189,7 @@ Alternatively you can set up the software environment locally on your own comput
 
 2. Want a more challenging assignment? Write a `python` script that does both tasks.
 
-# Advanced Concepts (Optional)
+## Advanced Concepts (Optional)
 
 # Resources
 

@@ -131,7 +131,7 @@ Starting with the group member next to the first person who successfully pushed,
 7. The next person in the group should repeat steps 1-6 until everyone has successfully pushed their entry to the consolidated `collision.txt` file on GitHub. 
 
 
-## Advanced Concepts
+## Advanced Concepts (Optional)
 
 ### Stashing, rebasing, etc.
 
@@ -257,7 +257,7 @@ This single command creates the GitHub repository and pushes your code. See the 
    git branch -d my-feature
    ```
 
-## Advanced Concepts
+## Advanced Concepts (Optional)
 
 ### Creating a Repository from a Template
 

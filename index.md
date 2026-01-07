@@ -32,7 +32,7 @@ To stay current with new releases from the course repository:
 
 1. Add an upstream source (if not already added):
    ```bash
-   git remote add upstream git@github.com:nmagee/ds2002-course.git
+   git remote add upstream git@github.com:ksiller/ds2002-course.git
    ```
 
 2. Fetch from the upstream branch:
