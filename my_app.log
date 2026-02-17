@@ -1,0 +1,5 @@
+2026-02-17 13:23:18 - INFO - Starting calculations...
+2026-02-17 13:23:24 - DEBUG - Value: 4
+2026-02-17 13:23:24 - DEBUG - Temporary result: 14
+2026-02-17 13:23:24 - INFO - Result: 3.5
+2026-02-17 13:23:24 - INFO - Done. Logs saved to my_app.log
