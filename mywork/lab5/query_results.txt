@@ -1,0 +1,6 @@
+artist_name	genre	album_title	release_date
+Taylor Swift	Pop	Folklore	2020-07-24
+Taylor Swift	Pop	Lover	2019-08-23
+Sabrina Carpenter	Pop	Man's Best Friend	2025-08-29
+Harry Styles	Pop	Harry's House	2022-05-20
+Harry Styles	Pop	Fine Line	2019-12-13
