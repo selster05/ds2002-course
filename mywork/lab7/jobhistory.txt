@@ -1,0 +1,21 @@
+JobID           JobName  Partition    Account  AllocCPUS      State ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- -------- 
+10334767     ood_vscode interacti+     ds2002          2    RUNNING      0:0 
+10334767.ba+      batch                ds2002          2    RUNNING      0:0 
+10334772     ood_vscode interacti+     ds2002          0 CANCELLED+      0:0 
+10334951     book-seri+ standard-+     ds2002          1     FAILED      2:0 
+10334951.ba+      batch                ds2002          1     FAILED      2:0 
+10335162     book-seri+ standard-+     ds2002          1     FAILED      1:0 
+10335162.ba+      batch                ds2002          1     FAILED      1:0 
+10335183     book-seri+ standard-+     ds2002          1  COMPLETED      0:0 
+10335183.ba+      batch                ds2002          1  COMPLETED      0:0 
+10335248_1   book-array standard-+     ds2002          1  COMPLETED      0:0 
+10335248_1.+      batch                ds2002          1  COMPLETED      0:0 
+10335248_2   book-array standard-+     ds2002          1  COMPLETED      0:0 
+10335248_2.+      batch                ds2002          1  COMPLETED      0:0 
+10335248_3   book-array standard-+     ds2002          1  COMPLETED      0:0 
+10335248_3.+      batch                ds2002          1  COMPLETED      0:0 
+10335248_4   book-array standard-+     ds2002          1  COMPLETED      0:0 
+10335248_4.+      batch                ds2002          1  COMPLETED      0:0 
+10335248_5   book-array standard-+     ds2002          1  COMPLETED      0:0 
+10335248_5.+      batch                ds2002          1  COMPLETED      0:0 
