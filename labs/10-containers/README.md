@@ -19,9 +19,10 @@ By completing this lab, you will be able to:
 
 ---
 
-To complete this lab, start a Code Server (VSCode) session in Open OnDemand on UVA's HPC system. 
+To complete this lab, start a Code Server (VS Code) session in Open OnDemand on UVA’s HPC system.
 
-**Activate your environment**
+**Activate your environment:**
+
 ```bash
 module load miniforge
 source activate ds2002
@@ -107,13 +108,12 @@ Replace `<uva_computing_id>` with your UVA computing ID (no `<>`).
 
 ### Step 3: Recreate your MySQL database (if needed)
 
-**If your database showed the two tables that you had created in Lab 5, great. Skip ahead to Step 4.** 
+**If your database already shows the two tables you created in Lab 05, skip ahead to Step 4.**
 
-**If your database is empty (no tables), don't worry. Follow these steps to (re)create the database using your `initialize.sql` script from Lab 5:**
+**If your database is empty (no tables), recreate the schema using your Lab 05 `initialize.sql`:**
 
-- On the ubuntu instance, create a new file `insert.sql` in nano and copy/paste your
-`initialize.sql` from Lab 5. Alternatively, clone your GitHub repository to the Ubuntu EC2 instance and change to the folder where the `initialize.sql` is located.
-- Run:  
+- On the Ubuntu EC2 instance, create a file named `initialize.sql` (for example with `nano`) and paste the contents of your Lab 05 `initialize.sql`, **or** clone your fork on the instance and `cd` to the directory that contains `initialize.sql`.
+- From the directory that contains `initialize.sql`, run:
    ```bash
    MYSQL_PWD=""   # put your MySQL password between the quotes (same as Lab 05 for this RDS user)
    sudo docker run -i mysql:8.0 mysql -h ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com -P 3306 -u <uva_computing_id> -p"$MYSQL_PWD" < initialize.sql
@@ -186,7 +186,7 @@ rsync -avz -e "ssh -i ~/.ssh/ds2002-mst3k.pem" \
 
 This uses your private key under `~/.ssh` and copies the listed files from the Ubuntu EC2 instance into your current directory on the HPC system.
 
-Run `ls` to confirm `add.sql`, `query.sql`, and `query_results.txt` are present, then move or copy them into `mywork/lab10` in your repo if you ran `rsync` elsewhere.
+Run `ls` to confirm `add.sql`, `query.sql`, and `query_results.txt` are present in `mywork/lab10`.
 
 ## Task 2 - Apptainer on UVA's HPC system
 
@@ -204,9 +204,13 @@ apptainer pull lolcow-latest.sif docker://godlovedc/lolcow:latest
 
 This may take a few minutes. If the terminal looks unresponsive, wait; large image pulls are slow. When the pull finishes, you should have `lolcow-latest.sif` in your home directory (the image in Apptainer format).
 
->**If you see an error ""**, it indicates that too many docker pull requests have been run from the node you're on. There's nothing you have done wrong; it's a limitation DockerHub imposes. 
-Instead of `apptainer pull`, copy the prebuild apptainer image file `lolcow-latest.sif` from our course S3 bucket to your current directory with this command:
-`aws s3 cp s3://course-read-only/lolcow-latest.sif .`
+> **If `apptainer pull` fails** with a Docker Hub **rate limit** or **pull** error (for example text mentioning `toomanyrequests`, “rate limit”, or denied pulls), many users on the same cluster may have hit Docker Hub’s limits. You did nothing wrong.
+>
+> **Fallback:** copy the prebuilt `lolcow-latest.sif` from the course read-only bucket (run from the directory where you want the file):
+
+```bash
+aws s3 cp s3://course-read-only/lolcow-latest.sif .
+```
 
 Test it:
 
@@ -258,9 +262,9 @@ By the end of this lab, your forked `ds2002-course` repository should include th
 
 | File | Description |
 |------|-------------|
-| `add.sql` | SQL script that adds **5 new rows** to your Lab 05 schema (applied from EC2 via Docker). |
+| `add.sql` | SQL script that adds **5 new rows** to your Lab 05 schema (applied from EC2 via Docker in Step 4). |
 | `query.sql` | Query script from Lab 05 (or updated copy), run from EC2 via Docker. |
-| `query_results.txt` | Text file with the stdout from running `query.sql` through the MySQL client in Docker (Step 4). |
+| `query_results.txt` | Text file with the stdout from running `query.sql` through the MySQL client in Docker (Step 5). |
 | `jokes.sh` | Slurm batch script for the **10-task job array** with the required `#SBATCH` resources and `apptainer run` for `lolcow-latest.sif`. |
 | `jokes.txt` | Concatenated stdout from the array jobs (e.g. from `cat *.out >> jokes.txt` after tasks complete). |
 
