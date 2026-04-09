@@ -3,7 +3,7 @@
 AMI="ami-0ec10929233384c7f"
 INSTANCE_TYPE="t2.nano"
 INSTANCE_NAME="ds2002-sny8gv"
-KEY_NAME="key-ec2"
+KEY_NAME="key-ec2-sny8gv"
 SECURITY_GROUP_ID="sg-0be6679b34372f15a"
 SUBNET_ID="subnet-085a38474f2e3b60c"
 
